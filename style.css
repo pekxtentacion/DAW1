@@ -10,67 +10,65 @@ body {
 }
 
 .nav-block{
-    position: absolute;
-    width: 82px;
-    height: 70px;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    float: left;
+    width: 10%;
+    height: 60px;
+    max-height: 200px;
+    max-width: 90px;
     background: #008705;
 }
 
 .nav-wrapper {
     position: sticky;
+    top: 0;
     width: 100%;
-    height: 70px;
-    left: 0px;
-    top: 0px;
+    height: 60px;
     background-color: #CC0000;
 
 }
 
 .logo {
-    position: absolute;
-    left: 10px;
-    width: 121px;
-    height: 70px;
-    left: 82px;
-    top: 0px;
+    position: relative;
+    float: left;
+    width: 111px;
+    height: 60px;
 }
 
 .logo-name {
-    position: absolute;
+    position: relative;
+    float: left;
     font-size: 40px;
     text-decoration: none;
     color: white;  
-    font-size: 45px;
+    margin-left: 1%;
     line-height: 60px;
-    width: 315px;
     height: 50.91px;
-    left: 236px;
-    top: 8px;
 }
 
 nav{
     position: relative;
     float: right;
+    max-width: 50%;
+    width: 25%;
 }
 
 nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 40px;
-    margin-right: 15px;
-    padding-top: 20px;
+    margin-right: 8%;
 }
 
 nav a{
     text-decoration: none;
     color: white;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
 }
