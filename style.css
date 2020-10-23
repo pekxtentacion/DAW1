@@ -103,23 +103,24 @@ nav a{
 
 }
 .pizzas{
+    /*
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
-    grid-row-gap: 1em;
+    grid-row-gap: 1em;*/
     font-family: 'Red Hat Display', sans-serif;
     
+    
 }
-.pizzas > div{
+.main-pizza {
     width: 387px;
     height: 283px;
-    left: 203px;
-    top: 301px;
     
     background: #E6E6E6;
     border-radius: 10px;
+    margin-top: 1em;
 }
-.pizzas > div > img{
+.main-pizza > img{
     width: 387px;
     height: 208px;
     left: 203px;
@@ -130,11 +131,15 @@ nav a{
    
 }
 
-.pizzas > div > p{
+.main-pizza > p{
+    display: flex;
     text-align: justify;
     font-size: 36px;
-    line-height: 5%;
-    
+    margin-top: 12px;
+}
+
+.precio-right{
+    float: right;
 }
 
 nav a > i{
@@ -169,16 +174,16 @@ nav li:hover > ul.dropdown {
 
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    /*left: 0;*/
+    /*bottom: 0;*/
     width: 100%;
     height: 15%;
     background-color: black;
 }
 
 .footer-bottom{
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -237,4 +242,9 @@ footer {
 
 .align > i {
     margin: 3px 0 0 4px;
+}
+
+.center-pizzas {
+    display: flex;
+    justify-content: center;
 }
