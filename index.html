@@ -4,25 +4,58 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>La Italiana - Home</title>
 </head>
 <body>
-    <div class="nav-wrapper">
-        <div class="nav-block"></div>
-        <a href="/">
-            <img src="images/Logo.png" alt="logo" class="logo">
-        </a>
-        <a href="/" class="logo-name">
-            La italiana
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#">Carta</a></li>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+    <header>
+        <div class="nav-wrapper">
+            <div class="nav-block"></div>
+            <a href="index.html">
+                <img src="images/Logo.png" alt="logo" class="logo">
+            </a>
+            <a href="index.html" class="logo-name">
+                La italiana
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="align">Carta<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="pizzas.html">Pizzas</a></li>
+                            <li><a href="pizzas.html">Complementos</a></li>
+                            <li><a href="pizzas.html">Bebidas</a></li>
+                            <li><a href="pizzas.html">Postres</a></li>
+                        </ul></li>
+                    <li><a href="#">Carrito</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="portada">
+            <img src="images/portada1.png" alt="portada">
+        </div>
+        <div class="caption">
+            <p>Horneando verdadera masa italiana desde 1997</p>
+        </div>
+    </header>
+        
+    <footer>
+        <div class="footer-img">
+            <img src="images/instagram.png" alt="instagram" class="instagram">
+            <img src="images/maps.png" alt="maps" class="maps">
+            <img src="images/phone.png" alt="phone" class="phone">
+            <img src="images/twitter.png" alt="twitter" class="twitter">
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-terms">
+                <a href="contacto.html">Contacto</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
     
+            <div class="footer-copy">
+                © 2020 La Italiana
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
