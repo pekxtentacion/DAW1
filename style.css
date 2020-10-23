@@ -72,4 +72,50 @@ nav a{
     color: white;
     font-size: 20px;
 }
+.pizzastitulo{
+    font-family: Red Hat Display;
+    font-size: 72px;
+}
+
+.pizzas4quesos{
+    margin-left: 10%;
+    width: 387px;
+    height: 283px;
+    left: 203px;
+    top: 301px;
+    background: #E6E6E6;
+    border-radius: 10px;
+    
+}
+
+.pizzas4quesos > img{
+    
+    width: 387px;
+    height: 208px;
+    left: 203px;
+    top: 301px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.p1{
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    
+    line-height: 5%;
+    margin-left: 5%;
+}
+.p2{
+    font-family: Red Hat Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    
+    line-height: 5%;
+    margin-right: 5%;
+}
+
 
