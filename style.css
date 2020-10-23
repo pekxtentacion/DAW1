@@ -31,6 +31,30 @@ header img{
     text-align: center;
 }
 
+article.portada-article {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 60% 15%;
+    padding: 10px;
+}
+
+article > section.portada-section {
+    text-align: left;
+    padding: 20px;
+}
+
+article > aside.portada-aside > img {
+    width: 183px;
+    height: 457px;
+}
+
+.wrapper-contacto {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 25% 25%;
+    padding: 10px;
+}
+
 
 
 .nav-block{
@@ -174,12 +198,14 @@ nav li:hover > ul.dropdown {
 
 
 footer {
+    margin-top: 10%;
     position: relative;
     /*left: 0;*/
     /*bottom: 0;*/
     width: 100%;
     height: 15%;
     background-color: black;
+    clear: both;
 }
 
 .footer-bottom{
@@ -192,7 +218,7 @@ footer {
     display: flex;
     justify-content: center;
     color: #797979;
-    margin-bottom: 0.5%;
+    
 }
 
 .footer-terms{
