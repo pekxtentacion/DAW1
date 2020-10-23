@@ -5,9 +5,33 @@ body {
     font-weight: normal;
 }
 
-.prueba {
-    height: 2000px;
+header img{
+    max-width: 1200px;
+    width: 100%;
 }
+
+.portada {
+    display: flex;
+    background-color: #f0f0f0;
+    justify-content: center;
+}
+
+.caption {
+    background-color: #008705;
+    display: flex;
+    justify-content: center;
+    height: 3vh;
+    width: 100%;
+}
+
+.caption > p{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+
 
 .nav-block{
     position: relative;
