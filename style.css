@@ -190,7 +190,7 @@ nav li > ul.dropdown {
     position: absolute;
     display: none;
     width: 200px;
-    height: 100px;
+    height: 111px;
     background: #CC0000;
     padding-top: 0;
 }
@@ -291,7 +291,7 @@ footer {
 }
 
 .align > i {
-    margin: 3px 0 0 4px;
+    margin: 7px 0 0 4px;
 }
 
 .center-pizzas {
