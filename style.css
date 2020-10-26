@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Display', sans-serif!important;
     font-style: normal;
     font-weight: normal;
 }
@@ -67,7 +67,7 @@ article > aside.portada-aside > img {
     background: #008705;
 }
 
-.nav-wrapper {
+.nav-wrap{
     position: sticky;
     top: 0;
     width: 100%;
@@ -136,6 +136,8 @@ nav a{
     
     
 }
+
+
 .main-pizza {
     width: 387px;
     height: 283px;
@@ -155,11 +157,25 @@ nav a{
    
 }
 
-.main-pizza > p{
-    display: flex;
-    text-align: justify;
+.pizza-text{
     font-size: 36px;
     margin-top: 12px;
+}
+
+.pizza-title {
+    margin-left: 0.5em;
+}
+
+.pizza-price {
+    margin-right: 1em;
+}
+
+.marginsetup {
+    margin: 0;
+}
+
+.marginsetup > div{
+    margin: 0 0 0 0;
 }
 
 .precio-right{
@@ -196,6 +212,14 @@ nav li:hover > ul.dropdown {
     display: block;
 }
 
+/* Esto es un poco chapuza pero fixealo con donde lo necesitas */
+a {
+    text-decoration: none!important;
+}
+
+a:hover{
+    color: white!important;
+}
 
 footer {
     margin-top: 10%;
