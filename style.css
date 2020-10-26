@@ -20,7 +20,7 @@ header img{
     background-color: #008705;
     display: flex;
     justify-content: center;
-    height: 3vh;
+    height: 4vh;
     width: 100%;
 }
 
@@ -274,3 +274,12 @@ footer {
     display: flex;
     justify-content: center;
 }
+.center-complementos{
+    display: flex;
+    justify-content: center;
+}
+
+.complementos{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
