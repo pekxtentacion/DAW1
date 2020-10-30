@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>La Italiana - Pizzas</title>
+    <title>La Italiana - 4 Quesos</title>
 </head>
 <body>
     <header>
@@ -28,44 +28,50 @@
                             <li><a href="complementos.html">Bebidas</a></li>
                             <li><a href="postres.html">Postres</a></li>
                         </ul></li>
-                    <li><a href="#">Carrito</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <h1 class="tituloproducto">4 Quesos</h1>
-    <div class="imagenproducto">
-        <img src="images/17-Pizza-Piazza.jpg" alt="4 Quesos" />
+    <!-- Usamos bootstrap para el grid -->
+    <div class="row pizza-row">
+        <div class="col pizza-img">
+            <img src="images/17-Pizza-Piazza.jpg" alt="4 Quesos" />
+        </div>
+        <div class="col pizza-data">
+            <div class="productosetup">
+                <div class="tamañoproducto">
+                    <p>Tamaño:</p>
+                    <select name="menu">
+                        <option>Mediana</option>
+                        <option>Grande</option>  
+                    </select>
+                </div>
+                <div class="masaproducto">
+                    <p>Masa:</p>
+                    <select name="menu">
+                        <option>Fina</option>
+                        <option>Gorda</option>  
+                    </select>
+                </div>
+                <div class="cantidadproducto">
+                    <p>Cantidad: </p>
+                    <input type="number" name="cantidad" step="any">
+                </div>
+                <div class="precioproducto">
+                    <p>Precio:</p>
+        
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="productosetup">
-        <div class="tamañoproducto">
-            <p>Tamaño:</p>
-            <select name="menu">
-                <option>Mediana</option>
-                <option>Grande</option>  
-            </select>
-        </div>
-        <div class="masaproducto">
-            <p>Masa:</p>
-            <select name="menu">
-                <option>Fina</option>
-                <option>Gorda</option>  
-            </select>
-        </div>
-        <div class="cantidadproducto">
-            <p>Cantidad: </p>
-            <input type="number" name="cantidad" step="any">
-        </div>
-        <div>
-            <p>Precio:</p>
-
-        </div>
-        <div class="ingredientes">
-            <p>Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano</p>
-        </div>
-    </div>
+    
     <div class="extras">
+        <div class="ingredientes">
+            <p>Ingredientes: Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano</p>
+        </div>
         <h3>Extras:</h3>
         <input type="checkbox" name="casilla"> Extra Queso 0,30€ <br>
         <input type="checkbox" name="casilla"> Atún 0,30€ <br>
