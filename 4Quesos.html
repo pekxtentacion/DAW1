@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>La Italiana - Pizzas</title>
 </head>
 <body>
+    <header>
+        <div class="nav-wrap">
+            <div class="nav-block"></div>
+            <a href="index.html">
+                <img src="images/Logo.png" alt="logo" class="logo">
+            </a>
+            <a href="index.html" class="logo-name">
+                La italiana
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="align">Carta<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="pizzas.html">Pizzas</a></li>
+                            <li><a href="complementos.html">Complementos</a></li>
+                            <li><a href="complementos.html">Bebidas</a></li>
+                            <li><a href="postres.html">Postres</a></li>
+                        </ul></li>
+                    <li><a href="#">Carrito</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <h1 class="titulo4quesos">4 Quesos</h1>
     <div class="imagen4quesos">
         <img src="images/pizza_cuatro_quesos.jpg" alt="4 Quesos" />
@@ -25,12 +53,70 @@
                 <option>Gorda</option>  
             </select>
         </div>
+        <div class="cantidadproducto">
+            <p>Cantidad: </p>
+            <input type="number" name="cantidad" step="any">
+        </div>
         <div>
             <p>Precio:</p>
-        </div>
 
-        
+        </div>
+        <div class="ingredientes">
+            <p>Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano</p>
+        </div>
     </div>
+    <div>
+        <h3>Extras:</h3>
+        <input type="checkbox" name="casilla"> Extra Queso 0,30€ <br>
+        <input type="checkbox" name="casilla"> Atún 0,30€ <br>
+        <input type="checkbox" name="casilla"> Cebolla 0,30€ <br>
+        <input type="checkbox" name="casilla"> Bacon 0,30€
+    </div>
+    <h2 class="clientestitulo">Los clientes también compran:</h2>
+    <div class="center-pizzas">
+        <div class="pizzas">
+            <div class="row">
+                <div class="col">
+                    <div class="main-clientes">
+                        <img src="images/17-Pizza-Piazza.jpg" alt="Piazza" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="main-clientes">
+                        <img src="images/pizza-frutti-di-mare.jpg" alt="Frutti di Mare"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="main-clientes">
+                        <img src="images/mediterranea.png" alt="Mediterránea" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="footer-img">
+            <img src="images/instagram.png" alt="instagram" class="instagram">
+            <img src="images/maps.png" alt="maps" class="maps">
+            <img src="images/phone.png" alt="phone" class="phone">
+            <img src="images/twitter.png" alt="twitter" class="twitter">
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-terms">
+                <a href="contacto.html">Contacto</a>
+                <a href="#">Términos y condiciones</a>
+            </div>
+    
+            <div class="footer-copy">
+                © 2020 La Italiana
+            </div>
+        </div>
+    </footer>
 
     
 </body>
