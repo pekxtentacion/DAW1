@@ -335,14 +335,47 @@ footer {
     margin-left: 5%;
 
 }
-.imagenproducto{
-    margin-left: 5%;
-   
+
+.pizza-row{
+    margin: 0!important;
+    
 }
-.imagenproducto > img{
-    width: 700px;
-    height: 408px;
-    left: 700px;
-    top: 700px;
+.pizza-img{
+    margin: 0 5% 5% 5%;
+}
+.pizza-data{
+    margin: 0 5% 5% 5%;
+    
+}
+
+.pizza-img > img {
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+}
+
+.tamañoproducto > p, .masaproducto > p, .cantidadproducto > p, .precioproducto > p {
+    margin: 1em 0 0 0;
+}
+.tabla{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    
+}
+td >img{
+    width: 187px;
+    height: 108px;
+    left: 103px;
+    top: 201px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.eliminar{
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 50px;
 }
