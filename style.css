@@ -224,7 +224,6 @@ nav li:hover > ul.dropdown {
     display: block;
 }
 
-/* Esto es un poco chapuza pero fixealo con donde lo necesitas */
 a {
     text-decoration: none!important;
 }
@@ -335,6 +334,19 @@ footer {
     margin-top: 5%;
     margin-left: 5%;
 
+}
+
+.col {
+    margin-top: 3em;
+    text-align: center;
+}
+
+.col > p {
+    font-size: 2em;
+}
+.col > img{
+    width: 20em;
+    height: 11.5em;
 }
 
 .pizza-row{
