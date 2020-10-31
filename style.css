@@ -380,3 +380,10 @@ footer {
     left: 20px;
     top: 20px;
 }
+.main-pizza:hover {
+    transform: scale(1.1);
+  
+  
+  }
+  
+  
