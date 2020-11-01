@@ -319,7 +319,9 @@ footer {
     height: 208px;
     left: 203px;
     top: 301px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
 }
 .clientestitulo{
     font-family: 'Red Hat Display', sans-serif;
@@ -331,7 +333,7 @@ footer {
     font-family: 'Red Hat Display', sans-serif;
 }
 .tituloproducto{
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 5%;
 
 }
@@ -366,10 +368,10 @@ p:hover > a:hover {
     
 }
 .pizza-img{
-    margin: 0 5% 5% 5%;
+    margin: 2% 5% 2% 4%;
 }
 .pizza-data{
-    margin: 0 5% 5% 5%;
+    text-align: left;
     
 }
 
@@ -383,7 +385,9 @@ p:hover > a:hover {
 
 .tamañoproducto > p, .masaproducto > p, .cantidadproducto > p, .precioproducto > p {
     margin: 1em 0 0 0;
+    font-size: 20px;
 }
+
 .tabla{
     width: 90%;
     display: flex;
@@ -396,7 +400,9 @@ p:hover > a:hover {
     height: 108px;
     left: 103px;
     top: 201px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
 }
 .eliminar > img{
     width: 20px;
@@ -406,8 +412,12 @@ p:hover > a:hover {
 }
 .main-pizza:hover {
     transform: scale(1.1);
-  
-  
   }
+.hoverclientes:hover{
+    transform: scale(1.1);
+}
+.table > tbody> tr:hover{
+    background-color:#E6E6E6;
+}
   
   
