@@ -18,7 +18,7 @@ function cargarCatalogo(show){
             "nombre": "Piazza",
             "id": "P3",
             "precio": "7,50€",
-            "source": "images/pizza_cuatro_quesos.jpg",
+            "source": "images/17-Pizza-Piazza.jpg",
             "html": "4Quesos.html"
         },
         {
