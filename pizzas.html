@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>La Italiana - Pizzas</title>
+
+    <script>
+        $( document ).ready(function() {
+            cargarCatalogo();
+        });
+    </script>
+
 </head>
 
 <body>
@@ -41,95 +50,8 @@
         <p class="descriptionpizzas">Cosa cosa cosa cosacosa asd asd asd asd asd asd as dasd asd a sd asd</p>
 
         <div class="center-pizzas">
-            <div class="pizzas">
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-pizza"  onclick="window.location='4Quesos.html'">
-                            <img  src="images/pizza_cuatro_quesos.jpg" alt="4 Quesos" />
-                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'><a href="4Quesos.html">4 Quesos</a> </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">7,50€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/carbonara.jpg" alt="Carbonara" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Carbonara</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">7,60€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/17-Pizza-Piazza.jpg" alt="Piazza" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Piazza</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">8,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/pizza-4-estaciones.png" alt="4 Estaciones" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>4 Estaciones</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">7,60€</p>
-                                </div>
-                            </div>
-                                
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/pizza-frutti-di-mare.jpg" alt="Frutti di Mare" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Frutti di Mare</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">8,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/mediterranea.png" alt="Mediterránea" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Mediterranea</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">7,60€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            
+            <div id="elementos" class="pizzas">
+                
             </div>
         </div>
 
@@ -152,5 +74,6 @@
         </div>
     </footer>
         
+    
 </body>
 </html>
