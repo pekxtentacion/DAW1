@@ -138,15 +138,11 @@ nav a{
     margin-left: 5%;
 
 }
+
 .pizzas{
-    /*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 1em;*/
     font-family: 'Red Hat Display', sans-serif;
-    
-    
+    padding: 1em 2em;
+    margin-left: 1em;
 }
 
 
@@ -218,6 +214,10 @@ nav li > ul.dropdown li a {
     font-size: 17px;
     color: white;
     display: block;
+}
+
+section.portada-section > p {
+    text-align: justify;
 }
 
 nav li:hover > ul.dropdown {
@@ -307,8 +307,10 @@ footer {
 
 .center-pizzas {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
 }
+
 .main-clientes {
     width: 387px;
     height: 208px;
@@ -410,6 +412,7 @@ p:hover > a:hover {
     left: 20px;
     top: 20px;
 }
+
 .main-pizza:hover {
     transform: scale(1.1);
   }
@@ -420,4 +423,83 @@ p:hover > a:hover {
     background-color:#E6E6E6;
 }
   
+@media only screen and (min-width : 600px) and (max-width : 1023px) {
+    aside.portada-aside {
+        display:none;
+    }
+
+    .logo-name {
+        font-size: 2em;
+    }
+
+    div.row.pizza-row {
+        width: 100%;
+    }
+
+    div.row.pizza-row > div.col.pizza-img > img {
+        min-width: 400px;
+    }
+    
+    div.row.pizza-row > div.col.pizza-data {
+        width: 100%;
+    }
+
+    header > div.nav-wrap > nav {
+        width: 40%;
+    }
+
+    section.portada-section {
+        width:100%;
+    }
+
+    article.portada-article {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 100%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 600px) {
+    aside.portada-aside {
+        display:none;
+    }
+
+    .logo-name {
+        margin-left: 3em;
+        font-size: 2em;
+    }
+
+    div.row.pizza-row > div.col.pizza-img > img {
+        min-width: 400px;
+    }
+
+    div.extras {
+        position: relative;
+    }
+
+    header > div.nav-wrap > nav {
+        margin-right: 1em;
+        width: 100%;
+    }
+
+    header > div.nav-wrap {
+        height: 115px;
+    }
+
+    header > div.portada {
+        display: none;
+    }
+
+    section.portada-section {
+        width:100%;
+    }
+
+    article.portada-article {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 100%;
+        padding: 10px;
+    }
+}
   
