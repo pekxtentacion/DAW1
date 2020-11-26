@@ -1,4 +1,4 @@
-function cargarCatalogo(){
+function cargarCatalogo(show){
     let pizzas = [
         {
             "nombre": "4 Quesos",
@@ -42,12 +42,114 @@ function cargarCatalogo(){
             "source": "images/mediterranea.png",
             "html": "4Quesos.html"
         }
-    ]
+    ];
 
-    cargarJSON(pizzas);
+    let complementos = [
+        {
+            "nombre": "Pan de Ajo",
+            "id": "C1",
+            "precio": "2,50€",
+            "source": "images/Pan-de-ajo-y-queso.jpg", 
+            "html": ""
+        }, 
+        {
+            "nombre": "Aros Cebolla",
+            "id": "C2",
+            "precio": "2,50€",
+            "source": "images/aros-de-cebolla.jpg", 
+            "html": ""
+        }
+    ];
+    
+    let bebidas = [
+        {
+            "nombre": "Cocacola 1L",
+            "id": "C3",
+            "precio": "2,50€",
+            "source": "images/cocacola.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Fanta 1L",
+            "id": "C4",
+            "precio": "2,50€",
+            "source": "images/Fanta-Logo.png",
+            "html": ""
+        },
+        {
+            "nombre": "Clipper 1L",
+            "id": "C5",
+            "precio": "2,50€",
+            "source": "images/clipper.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Agua 1L",
+            "id": "C6",
+            "precio": "1,50€",
+            "source": "images/LG-AQUAVIA-cuadrado.jpg",
+            "html": ""
+        }
+    ];
+
+    let postres = [
+        {
+            "nombre": "Tarta Queso",
+            "id": "PO1",
+            "precio": "3,50€",
+            "source": "images/bux-1538396997-tarta_de_queso_sin_horno.jpg",
+            "html": ""
+        }, 
+        {
+            "nombre": "Crepe Nutella",
+            "id": "PO2",
+            "precio": "3,50€",
+            "source": "images/crepes-veganas-chocolate.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Profiterole",
+            "id": "PO3",
+            "precio": "3,50€",
+            "source": "images/chocolateprofiterole_86196_16x9.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Gofre",
+            "id": "PO4",
+            "precio": "3,50€",
+            "source": "images/gofre.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Panacota",
+            "id": "PO5",
+            "precio": "3,50€",
+            "source": "images/panacota.jpg",
+            "html": ""
+        },
+        {
+            "nombre": "Brownie",
+            "id": "PO6",
+            "precio": "3,50€",
+            "source": "images/ppal-brownie_0.jpg",
+            "html": ""
+        }
+    ];
+    
+
+    if(show == 1){
+        cargarJSON(pizzas,show);
+    }else if(show == 2){
+        cargarJSON(complementos,show);
+    }else if(show == 3){
+        cargarJSON(bebidas,show);
+    }else if(show == 4){
+        cargarJSON(postres,show);
+    }
 }
 
-function cargarJSON(json){
+function cargarJSON(json,show){
     var fila = 0;
     var div = "";
     for(let item of json){
@@ -80,6 +182,14 @@ function cargarJSON(json){
         fila++;
         
     }
-
-    document.getElementById("elementos").innerHTML = div;
+    if(show == 1){
+        document.getElementById("elementos").innerHTML = div;
+    }else if(show == 2){
+        document.getElementById("complementosid").innerHTML = div;
+    }else if(show == 3){
+        document.getElementById("bebidasid").innerHTML = div;
+    }else if(show == 4){
+        document.getElementById("postresid").innerHTML = div;
+    }
+    
 }

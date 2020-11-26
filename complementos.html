@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>La Italiana - Complementos y Bebidas</title>
+
+    <script>
+        $( document ).ready(function() {
+            cargarCatalogo(2);
+            cargarCatalogo(3);
+        });
+    </script>
+
 </head>
 <body>
     <header>
@@ -36,105 +46,15 @@
     </header>
         <h1 class="complementostitulo">Complementos</h1>
         <div class="center-pizzas">
-            <div class="pizzas">
+            <div id="complementosid" class="pizzas">
 
-                <div class="row">
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/Pan-de-ajo-y-queso.jpg" alt="Pan de Ajo" />
-                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Pan de Ajo</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">2,50€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/aros-de-cebolla.jpg" alt="Aros de Cebolla" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Aros Cebolla</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">2,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
-                </div>     
             </div>
         </div>
 
         <h1 class="complementostitulo">Bebidas</h1>
         <div class="center-pizzas">
-            <div class="pizzas">
+            <div id="bebidasid" class="pizzas">
 
-                <div class="row">
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/cocacola.jpg" alt="Cocacola" />
-                            
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Cocacola 1L</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">2,50€</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/Fanta-Logo.png" alt="Fanta" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Fanta 1L</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">2,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/clipper.jpg" alt="Clipper" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Clipper 1L</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">2,50€</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="main-pizza">
-                            <img  src="images/LG-AQUAVIA-cuadrado.jpg" alt="Agua" />
-                            <div class="row marginsetup">
-                                <div class="col-8">
-                                    <p class='pizza-text pizza-title'>Agua 1L</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="pizza-price pizza-text">1,50€</p>
-                                </div>
-                            </div>
-                                
-                        </div>
-                    </div>
-                </div>        
             </div>
         </div>
 
