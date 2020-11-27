@@ -1,11 +1,11 @@
-function cargarCatalogo(show,max){
+function cargarCatalogo(show,max,id){
     let pizzas = [
         {
             "nombre": "4 Quesos",
             "id": "P1",
             "precio": "7,50€",
             "source": "images/pizza_cuatro_quesos.jpg",
-            "html": "4Quesos.html",
+            "html": "pizza.html?id=P1",
             "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
@@ -13,15 +13,15 @@ function cargarCatalogo(show,max){
             "id": "P2",
             "precio": "7,60€",
             "source": "images/carbonara.jpg",
-            "html": "",
-            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
+            "html": "pizza.html?id=P2",
+            "ingredientes": "Nata, Bacon, Mozarella, Champiñones y Pimienta negra"
         },
         {
             "nombre": "Piazza",
             "id": "P3",
             "precio": "7,50€",
             "source": "images/17-Pizza-Piazza.jpg",
-            "html": "4Quesos.html",
+            "html": "pizza.html?id=P3",
             "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
@@ -29,24 +29,24 @@ function cargarCatalogo(show,max){
             "id": "P4",
             "precio": "7,60€",
             "source": "images/pizza-4-estaciones.png",
-            "html": "4Quesos.html",
-            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
+            "html": "pizza.html?id=P4",
+            "ingredientes": "Alcachofa, Aceitunas negras, Salami, Champiñones, Albahaca, Mozarella, Tomate y Orégano"
         },
         {
             "nombre": "Frutti di Mare",
             "id": "P5",
             "precio": "8,50€",
             "source": "images/pizza-frutti-di-mare.jpg",
-            "html": "4Quesos.html",
-            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
+            "html": "pizza.html?id=P5",
+            "ingredientes": "Aceite de oliva, Gambones, Tomate, Mejillones, Anillas de calamar y Albahaca"
         },
         {
             "nombre": "Mediterranea",
             "id": "P6",
             "precio": "7,60€",
             "source": "images/mediterranea.png",
-            "html": "4Quesos.html",
-            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
+            "html": "pizza.html?id=P6",
+            "ingredientes": "Sardina, Pimiento verde, Aceitunas negras, Mozarrella y Idiazabal"
         }
     ];
 
@@ -152,7 +152,34 @@ function cargarCatalogo(show,max){
         cargarJSON(bebidas,show,max);
     }else if(show == 4){
         cargarJSON(postres,show,max);
+    }else if(show == 5){
+        cargarPizza(pizzas,id)
     }
+}
+
+function cargarPizza(json,id) {
+    var pizzaImg = "";
+    var pizzaName = "";
+    var pizzaRcp = "";
+    var pizzaPrecio = "";
+    for(let item of json){
+        if(item.id == id){
+            pizzaImg += `
+                <img src="${item.source}" alt="${item.nombre}" />
+            `
+            pizzaName += item.nombre;
+            pizzaRcp +=  `
+                <p>Ingredientes: ${item.ingredientes}</p>
+            `
+            pizzaPrecio += `
+                <p>Precio: ${item.precio}</p>
+            `
+        }
+    }
+    $(".tituloproducto").text(pizzaName);
+    document.getElementById("pizzaImg").innerHTML = pizzaImg;
+    document.getElementById("pizzaPrecio").innerHTML = pizzaPrecio;
+    document.getElementById("pizzaRcp").innerHTML = pizzaRcp;
 }
 
 function cargarJSON(json,show,max){

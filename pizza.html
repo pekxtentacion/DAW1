@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>La Italiana - 4 Quesos</title>
+    <title>La Italiana</title>
+
+    <script>
+        $(document).ready(function () {
+            var id = new URLSearchParams(window.location.search);
+            cargarCatalogo(5,0,id.get("id"));
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -34,11 +43,11 @@
             </nav>
         </div>
     </header>
-    <h1 class="tituloproducto">4 Quesos</h1>
+    <h1 class="tituloproducto"></h1>
     <!-- Usamos bootstrap para el grid -->
     <div class="row pizza-row">
-        <div class="col pizza-img">
-            <img src="images/pizza_cuatro_quesos.jpg" alt="4 Quesos" />
+        <div id="pizzaImg" class="col pizza-img">
+            
         </div>
         <div class="col pizza-data">
             <div class="productosetup">
@@ -59,8 +68,8 @@
                 <div class="cantidadproducto">
                     <p>Cantidad: </p>
                     <input type="number" id="quantity" name="quantity" min="1" max="20" step="1" value="1">                </div>
-                <div class="precioproducto">
-                    <p>Precio: 7,50€</p>
+                <div id="pizzaPrecio" class="precioproducto">
+                    
         
                 </div>
             </div>
@@ -68,8 +77,8 @@
     </div>
     
     <div class="extras">
-        <div class="ingredientes">
-            <p>Ingredientes: Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano</p>
+        <div id="pizzaRcp" class="ingredientes">
+            
         </div>
         <h3>Extras:</h3>
         <input type="checkbox" name="casilla"> Extra Queso 0,30€ <br>
