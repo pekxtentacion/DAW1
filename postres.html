@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>La Italiana - Postres</title>
-    <script>
-        $( document ).ready(function() {
-            cargarCatalogo(4);
-        });
-    </script>
+    
 
 </head>
 
@@ -73,5 +69,34 @@
         </div>
     </footer>
         
+    <script>
+        var fila = 2;
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                fila = 1
+                cargarCatalogo(4,fila)
+            } else {
+                fila = 2
+                cargarCatalogo(4,fila)
+            }
+        }
+
+        function myFunctionY(y) {
+            if (y.matches) { // If media query matches
+                fila = 0
+                cargarCatalogo(4,fila)
+            } else {
+                fila = 1
+                cargarCatalogo(4,fila)
+            }
+        }
+
+        var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
+        var y = window.matchMedia("(max-width: 889px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+        myFunctionY(y)
+        y.addListener(myFunctionY)
+    </script>
 </body>
 </html>

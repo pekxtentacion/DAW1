@@ -1,46 +1,52 @@
-function cargarCatalogo(show){
+function cargarCatalogo(show,max){
     let pizzas = [
         {
             "nombre": "4 Quesos",
             "id": "P1",
             "precio": "7,50€",
             "source": "images/pizza_cuatro_quesos.jpg",
-            "html": "4Quesos.html"
+            "html": "4Quesos.html",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
             "nombre": "Carbonara",
             "id": "P2",
             "precio": "7,60€",
             "source": "images/carbonara.jpg",
-            "html": ""
+            "html": "",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
             "nombre": "Piazza",
             "id": "P3",
             "precio": "7,50€",
             "source": "images/17-Pizza-Piazza.jpg",
-            "html": "4Quesos.html"
+            "html": "4Quesos.html",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
             "nombre": "4 Estaciones",
             "id": "P4",
             "precio": "7,60€",
             "source": "images/pizza-4-estaciones.png",
-            "html": "4Quesos.html"
+            "html": "4Quesos.html",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
             "nombre": "Frutti di Mare",
             "id": "P5",
             "precio": "8,50€",
             "source": "images/pizza-frutti-di-mare.jpg",
-            "html": "4Quesos.html"
+            "html": "4Quesos.html",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         },
         {
             "nombre": "Mediterranea",
             "id": "P6",
             "precio": "7,60€",
             "source": "images/mediterranea.png",
-            "html": "4Quesos.html"
+            "html": "4Quesos.html",
+            "ingredientes": "Tomate, Mozarrella, Ricotta, Gorgonzola y Parmesano"
         }
     ];
 
@@ -139,19 +145,28 @@ function cargarCatalogo(show){
     
 
     if(show == 1){
-        cargarJSON(pizzas,show);
+        cargarJSON(pizzas,show,max);
     }else if(show == 2){
-        cargarJSON(complementos,show);
+        cargarJSON(complementos,show,max);
     }else if(show == 3){
-        cargarJSON(bebidas,show);
+        cargarJSON(bebidas,show,max);
     }else if(show == 4){
-        cargarJSON(postres,show);
+        cargarJSON(postres,show,max);
     }
 }
 
-function cargarJSON(json,show){
+function cargarJSON(json,show,max){
     var fila = 0;
     var div = "";
+    if(show == 1){
+        document.getElementById("elementos").innerHTML = div;
+    }else if(show == 2){
+        document.getElementById("complementosid").innerHTML = div;
+    }else if(show == 3){
+        document.getElementById("bebidasid").innerHTML = div;
+    }else if(show == 4){
+        document.getElementById("postresid").innerHTML = div;
+    }
     for(let item of json){
         if(fila == 0){
             div += "<div class='row'>";
@@ -174,7 +189,7 @@ function cargarJSON(json,show){
         </div>
         `;
         
-        if(fila == 2){
+        if(fila == max){
             div += "</div>"
             fila = 0;
             continue;
