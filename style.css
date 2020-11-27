@@ -476,7 +476,7 @@ p:hover > a:hover {
     
 }
 
-@media only screen and (min-width : 320px) and (max-width : 600px) {
+@media only screen and (min-width : 425px) and (max-width : 600px) {
     aside.portada-aside {
         display:none;
     }
@@ -517,6 +517,84 @@ p:hover > a:hover {
 
     header > div.nav-wrap {
         height: 115px;
+    }
+
+    header > div.portada {
+        display: none;
+    }
+
+    section.portada-section {
+        width:100%;
+    }
+
+    article.portada-article {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 100%;
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (max-width : 424px) {
+    .caption {
+        height: 10vh;
+    }
+    
+    aside.portada-aside {
+        display:none;
+    }
+
+    div.wrapper-contacto > section:not(.form) {
+        padding-top: 4em;
+    }
+
+    .logo-name {
+        margin-left: 1em;
+        font-size: 2em;
+    }
+
+    div.row.pizza-row > div.col.pizza-img > img {
+        width: 300px;
+    }
+
+    div.wrapper-contacto {
+        grid-template-columns: 50%;
+    }
+
+    .imagencarrito {
+        display: none;
+    }
+
+    #auxT {
+        display:none;
+    }
+
+    div.extras {
+        position: relative;
+    }
+
+    header > div.nav-wrap > nav {
+        margin-right: 2em;
+        width: 100%;
+    }
+
+    .pizza-text {
+        font-size: 1.5em;
+    }
+
+    .main-pizza {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-pizza > img {
+        width: 100%;
+        height: auto;
+    }
+
+    header > div.nav-wrap {
+        height: 120px;
     }
 
     header > div.portada {
