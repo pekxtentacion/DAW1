@@ -143,6 +143,7 @@ function cargarCatalogo(show,max,id){
         }
     ];
     
+    //let intervalo = setInterval(getDatos(show),5000)
 
     if(show == 1){
         cargarJSON(pizzas,show,max);
@@ -156,7 +157,29 @@ function cargarCatalogo(show,max,id){
         cargarPizza(pizzas,id)
     }
 }
-
+/*
+function getDatos(show){
+    const xhttp = new XMLHttpRequest();
+    if(show == 1){
+        xhttp.open('GET', 'pizzas.json', true)
+    }else if(show == 2){
+        cargarJSON(complementos,show,max);
+    }else if(show == 3){
+        cargarJSON(bebidas,show,max);
+    }else if(show == 4){
+        cargarJSON(postres,show,max);
+    }else if(show == 5){
+        cargarPizza(pizzas,id)
+    }
+    xhttp.send()
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            let datos = JSON.parse(this.responseText)
+            console.log(datos)
+        }
+    }
+}
+*/
 function cargarPizza(json,id) {
     var pizzaImg = "";
     var pizzaName = "";
