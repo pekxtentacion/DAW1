@@ -42,7 +42,7 @@
     </header>
 
         <h1 class="complementostitulo">Postres</h1>
-        <p class="descriptionpizzas">Prueba nuestra nuestros selectos postres de la mano de los mejores reposteros</p>
+        <p class="descriptionpizzas">Prueba nuestros selectos postres de la mano de los mejores reposteros</p>
         
         <div class="center-pizzas">
             <div id="postresid" class="pizzas">
@@ -70,25 +70,30 @@
     </footer>
         
     <script>
+        var interval;
         var fila = 2;
         function myFunction(x) {
             if (x.matches) { // If media query matches
                 fila = 1
-                cargarCatalogo(4,fila)
+                //cargarCatalogo(4,fila)
             } else {
                 fila = 2
-                cargarCatalogo(4,fila)
+                //cargarCatalogo(4,fila)
             }
+            interval = setInterval(getDatos, 10000,4,fila)
+            //getDatos(4,fila)
         }
 
         function myFunctionY(y) {
             if (y.matches) { // If media query matches
                 fila = 0
-                cargarCatalogo(4,fila)
+                //cargarCatalogo(4,fila)
             } else {
                 fila = 1
-                cargarCatalogo(4,fila)
+                //cargarCatalogo(4,fila)
             }
+            interval = setInterval(getDatos, 10000,4,fila)
+            //getDatos(4,fila)
         }
 
         var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")

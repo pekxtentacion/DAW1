@@ -70,28 +70,32 @@
         </div>
     </footer>
     <script>
-        
-        var fila = 2;
+        var interval;
+        var fila = 3;
         function myFunction(x) {
             if (x.matches) { // If media query matches
                 fila = 1
-                cargarCatalogo(1,fila)
+                //cargarCatalogo(1,fila)
             } else {
                 fila = 2
-                cargarCatalogo(1,fila)
+                //cargarCatalogo(1,fila)
             }
+            
+            interval = setInterval(getDatos, 10000, 1,fila)
         }
 
         function myFunctionY(y) {
             if (y.matches) { // If media query matches
                 fila = 0
-                cargarCatalogo(1,fila)
+                //cargarCatalogo(1,fila)
             } else {
-                fila = 1
-                cargarCatalogo(1,fila)
+                fila = 1                
+                //cargarCatalogo(1,fila)
             }
+            
+            interval = setInterval(getDatos, 10000,1,fila)
         }
-
+        
         var x = window.matchMedia("(min-width : 890px) and (max-width : 1310px)")
         var y = window.matchMedia("(max-width: 889px)")
         myFunction(x) // Call listener function at run time
@@ -99,7 +103,6 @@
         myFunctionY(y)
         y.addListener(myFunctionY)
         
-       //getDatos(1)
     </script>
     
 </body>

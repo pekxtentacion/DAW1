@@ -1,3 +1,4 @@
+/*
 function cargarCatalogo(show,max,id){
     let pizzas = [
         {
@@ -157,29 +158,37 @@ function cargarCatalogo(show,max,id){
         cargarPizza(pizzas,id)
     }
 }
-/*
-function getDatos(show){
+*/
+
+
+function getDatos(show,max,id){
     const xhttp = new XMLHttpRequest();
     if(show == 1){
         xhttp.open('GET', 'pizzas.json', true)
     }else if(show == 2){
-        cargarJSON(complementos,show,max);
+        xhttp.open('GET', 'complementos.json', true)
     }else if(show == 3){
-        cargarJSON(bebidas,show,max);
+        xhttp.open('GET', 'bebidas.json', true)
     }else if(show == 4){
-        cargarJSON(postres,show,max);
+        xhttp.open('GET', 'postres.json', true)
     }else if(show == 5){
-        cargarPizza(pizzas,id)
+        xhttp.open('GET', 'pizzas.json', true)
     }
     xhttp.send()
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let datos = JSON.parse(this.responseText)
-            console.log(datos)
+            if(show != 5){
+                cargarJSON(datos,show,max)
+                console.log(datos)
+            }else{
+                cargarPizza(datos,id)
+            }
         }
     }
 }
-*/
+
+
 function cargarPizza(json,id) {
     var pizzaImg = "";
     var pizzaName = "";
